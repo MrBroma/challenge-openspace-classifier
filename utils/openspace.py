@@ -27,3 +27,4 @@ class Openspace:
 
     def store(self,filename) -> None:
         pass
+
