@@ -10,17 +10,16 @@ class Seat:
         return f"TO DO"
     
 #creation of the function st_occupant() chich will allow to set a person on a chair
-    def set_occupant(free, occupant):
+    def set_occupant(free: bool, occupant: str) -> str:
         if free == True:
             occupant = name
             free = False
             return occupant
     
-    def remove_occupant(self,free, occupant):
+    def remove_occupant(self, free: bool, occupant):
         if occupant == name
             occupant == ""
             free == True
-            print(name)
             return name
         pass
 
