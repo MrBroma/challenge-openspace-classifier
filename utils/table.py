@@ -25,13 +25,10 @@ class Seat:
 
 # class Table --> manage the capacity and seats
 class Table:
-    capacity = 0
-    seats = 2
-
-    def __init__(self, capacity, seats) -> None:
+    def __init__(self, capacity: int = 4) -> None:
         self.capacity = capacity
-        self.seats = seats
-        
+        self.seats = [Seat for x in range(4)]
+    
     def __str__(self) -> str:
         return f"TO DO"
 
@@ -49,3 +46,4 @@ class Table:
         return number_seats
         pass
 
+tables = Table()
