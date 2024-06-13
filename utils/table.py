@@ -2,7 +2,7 @@
 class Seat:
     occupant =""
     free = True
-    def __init__(self,free,occupant):
+    def __init__(self, free:bool, occupant: str):
         self.free = free
         self.occupant = occupant
     
@@ -10,13 +10,13 @@ class Seat:
         return f"TO DO"
     
 #creation of the function st_occupant() chich will allow to set a person on a chair
-    def set_occupant(free: bool, occupant: str) -> str:
+    def set_occupant(self) -> str:
         if free == True:
             occupant = name
             free = False
             return occupant
     
-    def remove_occupant(self,free, occupant):
+    def remove_occupant(self, free, occupant):
         if occupant == name:
             occupant == ""
             free == True
@@ -32,8 +32,8 @@ class Table:
     def __str__(self) -> str:
         return f"TO DO"
 
-    def has_free_spot(self, capacity):
-        if capacity != 0:
+    def has_free_spot(self):
+        if self.capacity != 0:
             print("There is free seats")
             return True
         pass
@@ -47,3 +47,5 @@ class Table:
         pass
 
 tables = Table()
+
+print(tables.capacity)
