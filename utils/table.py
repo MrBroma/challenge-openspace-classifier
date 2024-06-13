@@ -16,8 +16,8 @@ class Seat:
             free = False
             return occupant
     
-    def remove_occupant(self, free: bool, occupant):
-        if occupant == name
+    def remove_occupant(self,free, occupant):
+        if occupant == name:
             occupant == ""
             free == True
             return name
@@ -25,6 +25,9 @@ class Seat:
 
 # class Table --> manage the capacity and seats
 class Table:
+    capacity = 0
+    seats = 2
+
     def __init__(self, capacity, seats) -> None:
         self.capacity = capacity
         self.seats = seats
