@@ -1,10 +1,13 @@
 #class seat creation
-class seat():
+class Seat:
     occupant =""
     free = True
     def __init__(self,free,occupant):
         self.free = free
         self.occupant = occupant
+    
+    def __str__(self) -> str:
+        return f"TO DO"
     
 #creation of the function st_occupant() chich will allow to set a person on a chair
     def set_occupant(free, occupant):
@@ -27,7 +30,9 @@ class Table:
         self.capacity = capacity
         self.seats = seats
         
-    
+    def __str__(self) -> str:
+        return f"TO DO"
+
     def has_free_spot(self, capacity):
         if capacity != 0:
             print("There is free seats")
