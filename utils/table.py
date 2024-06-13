@@ -42,8 +42,8 @@ class Table:
         return name
         pass
 
-    def left_capacity():
-        return number_seats
+    def left_capacity(self):
+        return 0#number_seats
         pass
 
 tables = Table()
