@@ -17,6 +17,12 @@ class Openspace:
         pass
     
     def display(self) -> None:
+        for i in range(len(self.number_of_tables)):
+            table = self.tables[i]
+            occupancy = table.capacity - table.left_capacity()
+            print(f"Table {i+1} has {occupancy} seats taken :")
+            for j in table.seats:
+                print(f"{j.occupant}")
         pass
 
     def store(self,filename) -> None:
