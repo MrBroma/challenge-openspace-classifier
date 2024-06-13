@@ -5,7 +5,7 @@ from random import randrange
 class Openspace:
     """TO DO : Write the docstring"""
 
-    def __init__(self,setup:int = 4) -> None:
+    def __init__(self,setup:int = 6) -> None:
         self.number_of_tables = setup
         self.tables = [Table for x in range(setup)]
         pass
@@ -14,8 +14,7 @@ class Openspace:
         return f"TO DO"
     
     def organize(self,names: List[str]) -> List:
-        #for table in self.tables:
-
+        # for table in self.tables:
         pass
     
     def display(self) -> None:
@@ -30,4 +29,5 @@ class Openspace:
     def store(self,filename) -> None:
         pass
 
-classe = Openspace()
+# Testing of Opensdpace class
+classe = Openspace(3)
