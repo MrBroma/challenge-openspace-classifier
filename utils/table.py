@@ -17,7 +17,7 @@ class Seat:
             return occupant
     
     def remove_occupant(self,free, occupant):
-        if occupant == name
+        if occupant == name:
             occupant == ""
             free == True
             print(name)
@@ -26,6 +26,9 @@ class Seat:
 
 # class Table --> manage the capacity and seats
 class Table:
+    capacity = 0
+    seats = 2
+
     def __init__(self, capacity, seats) -> None:
         self.capacity = capacity
         self.seats = seats
