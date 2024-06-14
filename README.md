@@ -1,19 +1,16 @@
-# challenge-openspace-classifier
+# Challenge-Openspace-Classifier
 
-## description 
+## Description
 
-This program allow people to link a excel fil with name to assign them different places in a openspace.
+This program allow people to link a excel file with names to assign them differents places in a openspace.
 
-## prerequisit : 
-you have to have pandas installed
+## Prerequisite 
+They are in the requirements.txt file
 
-## Run it :
-to run it you just need to launch it in your command prompt.
+## Run it
+To run it you just need to launch it in your command prompt.
 
-## made by :
-it was made in two days by: 
-Geoffroy
-Loic 
-Antoine
+## Made by
+It was made in two days by : Geoffroy, Loic and Antoine 
 
 
