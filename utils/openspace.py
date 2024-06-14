@@ -1,6 +1,7 @@
 from typing import List
 from table import Table
 from random import randrange
+#import pandas as pd
 
 class Openspace:
     """TO DO : Write the docstring"""
@@ -28,16 +29,33 @@ class Openspace:
         pass
     
     def display(self) -> None:
+        free_seats = 0
         for i in range(self.number_of_tables):
             table = self.tables[i]
             occupancy = table.capacity - table.left_capacity()
+            free_seats += table.left_capacity()
             if occupancy != 0:
                 print(f"Table {i+1} has {occupancy} seats taken :")
                 for j in table.seats:
                     if not j.free:
                         print(f" ├─ {j.occupant}")
+        print(f"There is still {free_seats} free seats in the room.")
         pass
 
     def store(self,filename) -> None:
+        l_table = []
+        l_occupant = []
+        for n,i in enumerate(self.tables):
+            for j in i.seats:
+                l_table.append(n+1)
+                l_occupant.append(j.occupant)
         pass
+
+
+test_names = ["Luffy","Ace","Sabo","Crocodile","Dragon","Garp","Kizaru","Ussop","Chopper","Franky","Brooks","Nami","Robbin"]
+
+classe = Openspace()
+classe.organize(test_names)
+classe.display()
+classe.store("test")
 
