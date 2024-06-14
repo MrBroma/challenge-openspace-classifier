@@ -43,7 +43,7 @@ class Openspace:
                         print(f" ├─ {j.occupant}")
         if free_seats != 0 and self.room_small == False:
             return print(f"\nThere is still {free_seats} free seats in the room.")
-        else:
+        elif self.room_small == False:
             return print("\nAll the tables are full.")
 
     def store(self,filename) -> None:
