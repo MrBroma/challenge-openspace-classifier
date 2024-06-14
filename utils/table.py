@@ -20,6 +20,7 @@ class Seat:
             return True
         return False
 
+
 class Table:
     def __init__(self, capacity: int = 4) -> None:
         self.capacity = capacity
@@ -41,14 +42,3 @@ class Table:
     def left_capacity(self) -> int:
         return sum(1 for seat in self.seats if seat.free)
 
-# Exemple d'utilisation
-table = Table()
-print(table)  # Affiche l'état initial de la table
-
-if table.has_free_spot():
-    table.assign_seat("Alice")
-print(table)  # Affiche l'état de la table après l'assignation
-
-if table.has_free_spot():
-    table.assign_seat("Bob")
-print(table)  # Affiche l'état de la table après une autre assignation

@@ -41,9 +41,3 @@ class Openspace:
     def store(self,filename) -> None:
         pass
 
-# Testing of Opensdpace class
-test_names = ["Luffy","Ace","Sabo","Crocodile","Dragon","Garp","Kizaru","Ussop","Chopper","Franky","Brooks","Nami","Robbin"]
-
-classe = Openspace(4)
-classe.organize(test_names)
-classe.display()
