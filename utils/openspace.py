@@ -1,7 +1,7 @@
 from typing import List
 from table import Table
 from random import randrange
-#import pandas as pd
+import pandas as pd
 
 class Openspace:
     """TO DO : Write the docstring"""
@@ -49,6 +49,8 @@ class Openspace:
             for j in i.seats:
                 l_table.append(n+1)
                 l_occupant.append(j.occupant)
+        df = pd.DataFrame(list(zip(l_table,l_occupant)),columns=["Table","Colleague"])
+        df.to_csv(filename)
         pass
 
 
