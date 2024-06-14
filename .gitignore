@@ -1,2 +1,2 @@
 *.pyc # tous les fichiers terminant par '.pyc' seront ignorés
-__pycache__
+__pycache__/

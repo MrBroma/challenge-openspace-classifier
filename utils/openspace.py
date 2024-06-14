@@ -51,10 +51,11 @@ class Openspace:
                 l_occupant.append(j.occupant)
         pass
 
-# Testing of Opensdpace class
+
 test_names = ["Luffy","Ace","Sabo","Crocodile","Dragon","Garp","Kizaru","Ussop","Chopper","Franky","Brooks","Nami","Robbin"]
 
 classe = Openspace()
 classe.organize(test_names)
 classe.display()
 classe.store("test")
+
