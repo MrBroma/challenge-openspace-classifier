@@ -9,6 +9,7 @@ class Openspace:
     def __init__(self,setup:int = 6) -> None:
         self.number_of_tables = setup
         self.tables = [Table() for x in range(setup)]
+        self.room_small = False
         pass
 
     def __str__(self) -> str:
@@ -20,6 +21,7 @@ class Openspace:
         if n_peoples % 4 != 0:
             n_tables += 1
         if n_tables > self.number_of_tables:
+            self.room_small = True
             return print("Not enough seats")
         effective_tables = self.tables[:n_tables]
         for i in range(n_peoples):
@@ -39,8 +41,10 @@ class Openspace:
                 for j in table.seats:
                     if not j.free:
                         print(f" ├─ {j.occupant}")
-        print(f"There is still {free_seats} free seats in the room.")
-        pass
+        if free_seats != 0 and self.room_small == False:
+            return print(f"\nThere is still {free_seats} free seats in the room.")
+        else:
+            return print("\nAll the tables are full.")
 
     def store(self,filename) -> None:
         l_table = []
@@ -50,14 +54,6 @@ class Openspace:
                 l_table.append(n+1)
                 l_occupant.append(j.occupant)
         df = pd.DataFrame(list(zip(l_table,l_occupant)),columns=["Table","Colleague"])
-        df.to_csv(filename)
+        df.to_csv(filename + ".csv")
         pass
-
-
-# test_names = ["Luffy","Ace","Sabo","Crocodile","Dragon","Garp","Kizaru","Ussop","Chopper","Franky","Brooks","Nami","Robbin"]
-
-# classe = Openspace()
-# classe.organize(test_names)
-# classe.display()
-# classe.store("test")
 
