@@ -14,3 +14,4 @@ classe = Openspace()
 classe.organize(colleagues_name)
 classe.display()
 
+classe

@@ -4,7 +4,6 @@ from random import randrange
 import pandas as pd
 
 class Openspace:
-    """TO DO : Write the docstring"""
 
     def __init__(self,setup:int = 6) -> None:
         self.number_of_tables = setup
@@ -13,9 +12,12 @@ class Openspace:
         pass
 
     def __str__(self) -> str:
-        return f"TO DO"
+        return f"Openspace representation with {self.number_of_tables} tables of {len(self.tables[0].seats)}"
 
     def organize(self,names: List[str]) -> None:
+        """Takes a list of names and assign them to the availables tables
+        Args: 
+            names List[str]: A list of the names to be arranged"""
         n_peoples = len(names)
         n_tables = n_peoples // 4
         if n_peoples % 4 != 0:
@@ -31,6 +33,7 @@ class Openspace:
         pass
     
     def display(self) -> None:
+        """Display the current arrangement of tables and colleagues"""
         free_seats = 0
         for i in range(self.number_of_tables):
             table = self.tables[i]
@@ -47,6 +50,9 @@ class Openspace:
             return print("\nAll the tables are full.")
 
     def store(self,filename) -> None:
+        """Store the current arrangement of tables in a CSV file
+        Args: 
+            filename str: The name of the file, whitout the extension"""
         l_table = []
         l_occupant = []
         for n,i in enumerate(self.tables):
