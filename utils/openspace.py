@@ -1,5 +1,5 @@
 from typing import List
-from table import Table
+from .table import Table
 from random import randrange
 
 
