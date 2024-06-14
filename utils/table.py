@@ -1,6 +1,6 @@
 #class seat creation
 class Seat:
-    occupant =""
+    occupant = None
     free = True
     def __init__(self, free:bool, occupant: str):
         self.free = free
@@ -10,13 +10,13 @@ class Seat:
         return f"TO DO"
     
 #creation of the function st_occupant() chich will allow to set a person on a chair
-    def set_occupant(self) -> str:
+    def set_occupant(self, name : str) -> str:
         if free == True:
-            occupant = name
+            self.occupant = name
             free = False
-            return occupant
+            
     
-    def remove_occupant(self, free, occupant):
+    def remove_occupant(self, free, occupant, name) -> str:
         if occupant == name:
             occupant == ""
             free == True
