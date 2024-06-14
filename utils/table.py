@@ -1,11 +1,17 @@
 class Seat:
+
+
     def __init__(self, free: bool = True, occupant: str = ""):
         self.free = free
         self.occupant = occupant
 
+    
     def __str__(self) -> str:
         return f"Seat(free={self.free}, occupant='{self.occupant}')"
-
+    
+    def __repr__(self) -> str:
+        return Seat()
+    
     def set_occupant(self, name: str) -> bool:
         if self.free:
             self.occupant = name
@@ -19,6 +25,7 @@ class Seat:
             self.free = True
             return True
         return False
+    """ this function is used to see if somone is one a seat ans if it is removes it to bring the seat back to free the"""
 
 
 class Table:
