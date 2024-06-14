@@ -9,8 +9,8 @@ colleagues_name = list(colla_df['Colleagues'])
 print(colleagues_name)
 
 # Testing of Opensdpace class
-test_names = ["Luffy","Ace","Sabo","Crocodile","Dragon","Garp","Kizaru","Ussop","Chopper","Franky","Brooks","Nami","Robbin"]
 
-classe = Openspace(4)
-classe.organize(test_names)
+classe = Openspace()
+classe.organize(colleagues_name)
 classe.display()
+
