@@ -12,4 +12,4 @@ classe = Openspace()
 classe.organize(colleagues_name)
 classe.display()
 
-classe.store("test")
+classe.store("arrangement")
