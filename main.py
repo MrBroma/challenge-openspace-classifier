@@ -13,3 +13,4 @@ classe.organize(colleagues_name)
 classe.display()
 
 classe.store("arrangement")
+
